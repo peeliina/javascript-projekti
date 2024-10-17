@@ -3,12 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muunnoslaskuri</title>
+    <title>Muunnoslaskin</title>
     <link rel="stylesheet" href="scriptstyle.css">
 </head>
 <body>
-    <h1>Yksiköiden muunnos</h1>
+    <div class="calculator-container"> <!--Laskimen sisältö-->
+        <h1>Yksikkömuunnoslaskin</h1>
+        <div class="converter">
+            <label for="inputValue">Lisää arvo:</label>     
+            <div class="calculator-container"> <!--Laskimen ensimmäinen kohta, jossa lisätään numero muutosta varten-->
+            <input type="number" id="inputValue" placeholder="Numero">
+            
+            <label for="conversionType">Valitse muunnos</label>
+            <select id="conversionType"> <!--Lisätään muunnosvalinnat dropdown-menuun-->
+                <option value="kgToLbs">Kilogrammat Paunoihin</option>
+                <option value="lbsToKg">Paunat Kilogrammiin</option>
+                <option value="cmToInch">Senttimetrit Tuumiksi</option>
+                <option value="inchToCm">Tuumat Senttimetreiksi</option>
+            </select> <!--Option esittää yhtä valintaa menusta, jotka näyttävät eri valinnat arvoille. Niiden perusteella saadan eri tulos-->
 
-    <script src="script.js"></script>
+            <button id="convertButton">Muuta</button> <!--Nappi muunnosta varten, joka näyttää vastauksen sen painamisen jälkeen-->
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!--Liitetty script.js-tiedosto-->
 </body>
 </html>
