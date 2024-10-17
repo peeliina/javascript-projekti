@@ -13,3 +13,48 @@ h1 {
     color: #e721ae;
     letter-spacing: 2px
 }
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e721ae;
+    padding-bottom: 40px
+} /*Otsikoiden tyylit*/
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e721ae;
+    padding: 10px;
+} /*Labeleiden väri ja fontti*/
+
+.calculator-container {
+    background-color: #fad0ee;
+    padding: 100px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+} /*Laskimen tyylirakenne*/
+
+input, select, button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 15px;
+} /*Inputin, selectin ja painikkeen tekstikoot*/
+
+button {
+    background-color: #f29af6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} /*Painikkeen tyyli*/
+
+button:hover {
+    background-color: #da9af6;
+    transition: background-color 0.3s ease;
+} /*Nuoli painikkeen yllä vaihtaa sen väriä*/
+
+#result {
+    margin-top: 20px;
+    font-size: 30px;
+    color: #333;
+} /*Vastauksen tyyli*/
