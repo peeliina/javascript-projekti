@@ -1,0 +1,1 @@
+Yksikkömuunnoslaskin muuttaa käyttäjän antaman arvon eri mittausjärjestelmään.
