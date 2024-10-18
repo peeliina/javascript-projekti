@@ -38,7 +38,16 @@ document.getElementById('convertButton').addEventListener('click', () => {
 
     // Haetaan valittu arvo dropdown valikosta
     const conversionType = document.getElementById('conversionType').value;
-
+    // Haetaan laskun tulos
+    const resultField = document.getElementById('result');
+    //Vastauksen teksti muuttuu punaiseksi, jos syötetty symboli on väärä.
+    //Vastauksen sijasta resultFieldissä näkyy punainen teksti.
+    //Jos vastaus on esim. 0 tai kirjain, se näyttää tämän tuloksen
+    if (!inputValue || inputValue <= 0) {
+        resultField.textContent = 'Please enter a valid number';
+        resultField.style.color = 'red';
+        return;
+    }
     // Määritellään muuttuja "result"
     let result;
 
@@ -82,4 +91,7 @@ document.getElementById('convertButton').addEventListener('click', () => {
 
     // Lopuksi lisätään tulos id=result elementtiin index.html-tiedostoon. Tekstissä pitäisi näkyä "Result: ___ lbs/kg/inches/cm"
     document.getElementById('result').textContent = `Result: ${result}`;
+    //Vastauksen väri, "result" kohtaan tulee laskun vastaus
+    resultField.textContent = `Result: ${result}`;
+    resultField.style.color = '#e721ae';
 });
